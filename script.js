@@ -52,7 +52,7 @@ heroNext.addEventListener('click', () => {
 setInterval(() => {
     heroIndex = (heroIndex < heroSlides.length - 1) ? heroIndex + 1 : 0;
     updateHeroCarousel();
-}, 10000);
+}, 12000);
 
 // AI Input Placeholder Cycling
 const aiInput = document.getElementById('ai-input');
