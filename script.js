@@ -25,7 +25,67 @@ nextBtn.addEventListener('click', () => {
 setInterval(() => {
     currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
     updateCarousel();
-}, 5000);
+}, 8000);
+
+// Hero carousel
+const heroSlides = document.querySelectorAll('.hero-slide');
+const heroPrev = document.querySelector('.hero-prev');
+const heroNext = document.querySelector('.hero-next');
+let heroIndex = 0;
+
+function updateHeroCarousel() {
+    heroSlides.forEach((slide, index) => {
+        slide.classList.toggle('active', index === heroIndex);
+    });
+}
+
+heroPrev.addEventListener('click', () => {
+    heroIndex = (heroIndex > 0) ? heroIndex - 1 : heroSlides.length - 1;
+    updateHeroCarousel();
+});
+
+heroNext.addEventListener('click', () => {
+    heroIndex = (heroIndex < heroSlides.length - 1) ? heroIndex + 1 : 0;
+    updateHeroCarousel();
+});
+
+setInterval(() => {
+    heroIndex = (heroIndex < heroSlides.length - 1) ? heroIndex + 1 : 0;
+    updateHeroCarousel();
+}, 10000);
+
+// AI Input Placeholder Cycling
+const aiInput = document.getElementById('ai-input');
+const placeholders = [
+    "What is Tesla's latest model?",
+    "How does Autopilot work?",
+    "Tell me about Tesla's battery technology",
+    "What are Tesla's charging options?",
+    "How fast can Tesla cars go?",
+    "What is Tesla's mission?",
+    "How does Tesla's solar work?",
+    "What is the range of Tesla vehicles?"
+];
+
+let placeholderIndex = 0;
+
+function cyclePlaceholder() {
+    placeholderIndex = (placeholderIndex + 1) % placeholders.length;
+    aiInput.placeholder = placeholders[placeholderIndex];
+}
+
+aiInput.addEventListener('focus', () => {
+    aiInput.placeholder = '';
+});
+
+aiInput.addEventListener('blur', () => {
+    if (aiInput.value === '') {
+        aiInput.placeholder = placeholders[placeholderIndex];
+    }
+});
+
+// Start cycling placeholders
+setInterval(cyclePlaceholder, 3000);
 
 // Google Maps for Superchargers - Now using embedded iframe
 // function initMap() { ... } // Removed, using iframe embed instead

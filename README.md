@@ -6,35 +6,46 @@ A modern, responsive Tesla-inspired landing page featuring electric vehicle info
 
 ### Core Functionality
 - **Responsive Navigation**: Clean header with Tesla branding and navigation menu
-- **Hero Section**: Eye-catching landing area with call-to-action
-- **Model Carousel**: Interactive slideshow showcasing Tesla vehicle models (Model 3, Y, S, X, Cybertruck)
-  - Auto-play functionality (5-second intervals)
+- **Hero Section Carousel**: Dynamic slideshow with video and model-specific slides
+  - First slide: Video background with "Demo FSD (Supervised)" and "Learn More" buttons
+  - Second slide: Model 3 image with "Order Now" and "View Inventory" buttons
+  - Third slide: Model Y image with "Order Now" and "View Inventory" buttons
+  - Auto-play functionality (10-second intervals)
   - Manual navigation controls
   - Smooth transitions
+- **Model Carousel**: Interactive slideshow showcasing Tesla vehicle models (Model 3, Y, S, X, Cybertruck)
+  - Auto-play functionality (8-second intervals)
+  - Manual navigation controls
+  - Smooth transitions
+- **Features Carousel**: Showcase of Tesla's key features and technologies
 - **Energy Products**: Showcase of Tesla's solar and energy solutions
 - **EV Charging Map**: Embedded Google Maps showing charging stations in Pretoria, South Africa
-- **Footer**: Comprehensive links and company information
+- **Footer Carousel**: Rotating footer content with AI input functionality
+- **Fixed Footer**: Always-visible footer with "Ask a question" input bar
 
 ### Technical Features
 - **Responsive Design**: Mobile-first approach that works on all devices
-- **Smooth Animations**: CSS transitions and JavaScript-powered carousel
+- **Smooth Animations**: CSS transitions and JavaScript-powered carousels
 - **Modern UI**: Clean, minimalist design inspired by Tesla's aesthetic
 - **Fast Loading**: Optimized HTML, CSS, and JavaScript
+- **Multiple Carousels**: Independent carousel instances for different sections
 
 ## 🛠️ Technologies Used
 
 - **HTML5**: Semantic markup and structure
-- **CSS3**: Modern styling with Flexbox and Grid
-- **Vanilla JavaScript**: Interactive carousel and DOM manipulation
+- **CSS3**: Modern styling with Flexbox, Grid, and backdrop-filter effects
+- **Vanilla JavaScript**: Interactive carousels, DOM manipulation, and event handling
 - **Google Maps Embed**: Integrated map for charging station locations
 
 ## 📁 Project Structure
 
 ```
 Tesla-landing-page/
-├── index.html          # Main HTML file
-├── style.css          # CSS styling
-├── script.js          # JavaScript functionality
+├── index.html          # Main HTML file with all sections
+├── style.css          # CSS styling with responsive design
+├── script.js          # JavaScript functionality for carousels and interactions
+├── img/               # Image assets for models and features
+├── vid/               # Video assets for hero carousel
 └── README.md          # This file
 ```
 
@@ -47,6 +58,37 @@ Tesla-landing-page/
 ### Installation
 
 1. **Clone or Download** the project files to your local machine
+2. **Navigate** to the project directory
+3. **Start a local server**:
+   ```bash
+   python -m http.server 8000
+   ```
+4. **Open your browser** and go to `http://localhost:8000`
+
+## 📚 Sources & References
+
+This project was built using the following resources and references:
+
+### Official Tesla Resources
+- [Tesla Official Website](https://www.tesla.com/) - Main inspiration and design reference
+- [Tesla Gallery](https://www.tesla.com/tesla-gallery) - Visual assets and design inspiration
+
+### Development Tools & APIs
+- [Serper.dev Playground](https://serper.dev/playground) - Search API for development research
+- [Google AI Studio](https://aistudio.google.com/welcome?utm_source=google&utm_medium=cpc&utm_campaign=Cloud-SS-DR-AIS-FY26-global-gsem-1713578&utm_content=text-ad&utm_term=KW_google%20ai%20studio&gad_source=1&gad_campaignid=23417416052&gbraid=0AAAAACn9t64D25w2l3gIQtbyCMoiwzmY6&gclid=CjwKCAjw14zPBhAuEiwAP3-Eb_A7by1mSTu3vwjCfRVACDZreTf02FXZUd_xJ56eMIbVxnYukr0HexoCkugQAvD_BwE) - AI-powered development assistance
+
+### Learning Resources
+- [HTML Complete Guide - GeeksforGeeks](https://www.geeksforgeeks.org/html/html-complete-guide/) - HTML5 reference and tutorials
+- [CSS Tutorial - GeeksforGeeks](https://www.geeksforgeeks.org/css/css-tutorial/) - CSS3 styling and layout guides
+- [JavaScript Tutorial - GeeksforGeeks](https://www.geeksforgeeks.org/javascript/javascript-tutorial/) - JavaScript fundamentals and DOM manipulation
+
+## 🤝 Contributing
+
+Feel free to fork this project and submit pull requests with improvements or additional features.
+
+## 📄 License
+
+This project is for educational purposes. Tesla branding and assets are property of Tesla, Inc.
 
 2. **Navigate to the project directory**:
    ```bash
