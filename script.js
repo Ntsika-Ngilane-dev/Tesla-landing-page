@@ -1,31 +1,30 @@
-// Carousel functionality
-const carouselContainer = document.querySelector('.carousel-container');
-const slides = document.querySelectorAll('.slide');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
+// Models carousel
+const modelsTrack = document.querySelector('.models-track');
+const modelSlides = document.querySelectorAll('.model-slide');
+const modelsPrev = document.querySelector('.models-prev');
+const modelsNext = document.querySelector('.models-next');
+let modelIndex = 0;
 
-let currentIndex = 0;
+function updateModelsCarousel() {
+    if (!modelsTrack) {
+        return;
+    }
 
-function updateCarousel() {
-    const offset = -currentIndex * 100;
-    carouselContainer.style.transform = `translateX(${offset}%)`;
+    const offset = -modelIndex * 100;
+    modelsTrack.style.transform = `translateX(${offset}%)`;
 }
 
-prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
-    updateCarousel();
-});
+if (modelsTrack && modelSlides.length && modelsPrev && modelsNext) {
+    modelsPrev.addEventListener('click', () => {
+        modelIndex = modelIndex > 0 ? modelIndex - 1 : modelSlides.length - 1;
+        updateModelsCarousel();
+    });
 
-nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-    updateCarousel();
-});
-
-// Auto-play carousel
-setInterval(() => {
-    currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-    updateCarousel();
-}, 8000);
+    modelsNext.addEventListener('click', () => {
+        modelIndex = modelIndex < modelSlides.length - 1 ? modelIndex + 1 : 0;
+        updateModelsCarousel();
+    });
+}
 
 // Hero carousel
 const heroSlides = document.querySelectorAll('.hero-slide');
@@ -53,19 +52,21 @@ function updateHeroCarousel() {
     });
 }
 
-heroPrev.addEventListener('click', () => {
-    heroIndex = (heroIndex > 0) ? heroIndex - 1 : heroSlides.length - 1;
-    updateHeroCarousel();
-    startHeroAutoplay();
-});
+if (heroSlides.length && heroPrev && heroNext) {
+    heroPrev.addEventListener('click', () => {
+        heroIndex = (heroIndex > 0) ? heroIndex - 1 : heroSlides.length - 1;
+        updateHeroCarousel();
+        startHeroAutoplay();
+    });
 
-heroNext.addEventListener('click', () => {
-    heroIndex = (heroIndex < heroSlides.length - 1) ? heroIndex + 1 : 0;
-    updateHeroCarousel();
-    startHeroAutoplay();
-});
+    heroNext.addEventListener('click', () => {
+        heroIndex = (heroIndex < heroSlides.length - 1) ? heroIndex + 1 : 0;
+        updateHeroCarousel();
+        startHeroAutoplay();
+    });
 
-startHeroAutoplay();
+    startHeroAutoplay();
+}
 
 // AI Input Placeholder Cycling
 const aiInput = document.getElementById('ai-input');
@@ -87,18 +88,19 @@ function cyclePlaceholder() {
     aiInput.placeholder = placeholders[placeholderIndex];
 }
 
-aiInput.addEventListener('focus', () => {
-    aiInput.placeholder = '';
-});
+if (aiInput) {
+    aiInput.addEventListener('focus', () => {
+        aiInput.placeholder = '';
+    });
 
-aiInput.addEventListener('blur', () => {
-    if (aiInput.value === '') {
-        aiInput.placeholder = placeholders[placeholderIndex];
-    }
-});
+    aiInput.addEventListener('blur', () => {
+        if (aiInput.value === '') {
+            aiInput.placeholder = placeholders[placeholderIndex];
+        }
+    });
 
-// Start cycling placeholders
-setInterval(cyclePlaceholder, 3000);
+    setInterval(cyclePlaceholder, 3000);
+}
 
 // Google Maps for Superchargers - Now using embedded iframe
 // function initMap() { ... } // Removed, using iframe embed instead

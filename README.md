@@ -1,193 +1,149 @@
 # Tesla Landing Page
 
-A modern, responsive Tesla-inspired landing page featuring electric vehicle information, model showcase, and EV charging station locator.
+A responsive Tesla-inspired landing page built with HTML, CSS, and vanilla JavaScript. The project includes a video-first hero section, a Tesla lineup carousel, an energy products section, an embedded charging-station map, and a structured footer with navigation and call-to-action elements.
 
-## 🚗 Features
+## Overview
 
-### Core Functionality
-- **Responsive Navigation**: Clean header with Tesla branding and navigation menu
-- **Hero Section Carousel**: Dynamic slideshow with video and model-specific slides
-  - First slide: Video background with "Demo FSD (Supervised)" and "Learn More" buttons
-  - Second slide: Model 3 image with "Order Now" and "View Inventory" buttons
-  - Third slide: Model Y image with "Order Now" and "View Inventory" buttons
-  - Auto-play functionality (10-second intervals)
-  - Manual navigation controls
-  - Smooth transitions
-- **Model Carousel**: Interactive slideshow showcasing Tesla vehicle models (Model 3, Y, S, X, Cybertruck)
-  - Auto-play functionality (8-second intervals)
-  - Manual navigation controls
-  - Smooth transitions
-- **Features Carousel**: Showcase of Tesla's key features and technologies
-- **Energy Products**: Showcase of Tesla's solar and energy solutions
-- **EV Charging Map**: Embedded Google Maps showing charging stations in Pretoria, South Africa
-- **Footer Carousel**: Rotating footer content with AI input functionality
-- **Fixed Footer**: Always-visible footer with "Ask a question" input bar
+This project is a front-end landing page experience designed around Tesla-themed branding and product presentation. It focuses on clean layout, strong visual hierarchy, responsive behavior, and lightweight interactivity without any framework.
 
-### Technical Features
-- **Responsive Design**: Mobile-first approach that works on all devices
-- **Smooth Animations**: CSS transitions and JavaScript-powered carousels
-- **Modern UI**: Clean, minimalist design inspired by Tesla's aesthetic
-- **Fast Loading**: Optimized HTML, CSS, and JavaScript
-- **Multiple Carousels**: Independent carousel instances for different sections
+## Features
 
-## 🛠️ Technologies Used
+- Fixed white header with internal navigation links
+- Hero carousel with:
+  - A first slide using a background driving video
+  - Supporting image slides for Tesla models
+  - Clear headline and supporting copy
+  - Styled CTA buttons
+  - Manual previous and next controls
+  - Longer first-slide autoplay timing
+- Tesla lineup carousel featuring:
+  - Model S
+  - Model 3
+  - Model X
+  - Model Y
+- Consistent button system:
+  - Blue primary buttons with darker hover state
+  - White secondary buttons
+  - White "Schedule a Drive Today" button with blue steering wheel icon
+- Energy product cards for:
+  - Solar Panels
+  - Powerwall
+  - Megapack
+- Embedded Google Maps section for EV charging stations in Pretoria
+- Structured footer with:
+  - Brand summary
+  - Multiple functional navigation links
+  - Question input field
+  - Schedule-drive CTA
+- Responsive layout for desktop, tablet, and mobile
 
-- **HTML5**: Semantic markup and structure
-- **CSS3**: Modern styling with Flexbox, Grid, and backdrop-filter effects
-- **Vanilla JavaScript**: Interactive carousels, DOM manipulation, and event handling
-- **Google Maps Embed**: Integrated map for charging station locations
+## Tech Stack
 
-## 📁 Project Structure
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Google Maps Embed
 
-```
+## Project Structure
+
+```text
 Tesla-landing-page/
-├── index.html          # Main HTML file with all sections
-├── style.css          # CSS styling with responsive design
-├── script.js          # JavaScript functionality for carousels and interactions
-├── img/               # Image assets for models and features
-├── vid/               # Video assets for hero carousel
-└── README.md          # This file
+|-- index.html          # Main page structure and content
+|-- style.css           # Site styling, responsive layout, and visual system
+|-- script.js           # Hero and models carousel behavior, input placeholder rotation
+|-- img/                # Image assets for Tesla models and energy products
+|-- vid/                # Video assets for the hero section
+`-- README.md           # Project documentation
 ```
 
-## 🚀 Getting Started
+## Main Sections
 
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- Local web server (Python's built-in server recommended)
+### Header
 
-### Installation
+The header is fixed at the top of the page and provides quick navigation to the main sections of the site.
 
-1. **Clone or Download** the project files to your local machine
-2. **Navigate** to the project directory
-3. **Start a local server**:
-   ```bash
-   python -m http.server 8000
-   ```
-4. **Open your browser** and go to `http://localhost:8000`
+### Hero
 
-## 📚 Sources & References
+The hero area uses a full-screen video-led first slide, followed by image-based model slides. It includes a strong headline, supporting text, and styled primary/secondary CTA buttons.
 
-This project was built using the following resources and references:
+### Models
 
-### Official Tesla Resources
-- [Tesla Official Website](https://www.tesla.com/) - Main inspiration and design reference
-- [Tesla Gallery](https://www.tesla.com/tesla-gallery) - Visual assets and design inspiration
+The models section presents Tesla's four core vehicle models in a carousel with readable content, pricing, tags, and action buttons.
 
-### Development Tools & APIs
-- [Serper.dev Playground](https://serper.dev/playground) - Search API for development research
-- [Google AI Studio](https://aistudio.google.com/welcome?utm_source=google&utm_medium=cpc&utm_campaign=Cloud-SS-DR-AIS-FY26-global-gsem-1713578&utm_content=text-ad&utm_term=KW_google%20ai%20studio&gad_source=1&gad_campaignid=23417416052&gbraid=0AAAAACn9t64D25w2l3gIQtbyCMoiwzmY6&gclid=CjwKCAjw14zPBhAuEiwAP3-Eb_A7by1mSTu3vwjCfRVACDZreTf02FXZUd_xJ56eMIbVxnYukr0HexoCkugQAvD_BwE) - AI-powered development assistance
+### Energy
 
-### Learning Resources
-- [HTML Complete Guide - GeeksforGeeks](https://www.geeksforgeeks.org/html/html-complete-guide/) - HTML5 reference and tutorials
-- [CSS Tutorial - GeeksforGeeks](https://www.geeksforgeeks.org/css/css-tutorial/) - CSS3 styling and layout guides
-- [JavaScript Tutorial - GeeksforGeeks](https://www.geeksforgeeks.org/javascript/javascript-tutorial/) - JavaScript fundamentals and DOM manipulation
+The energy section highlights Tesla-related clean energy products in a card-based layout.
 
-## 🤝 Contributing
+### Charging
 
-Feel free to fork this project and submit pull requests with improvements or additional features.
+The charging section embeds Google Maps to show EV charging stations in Pretoria, South Africa.
 
-## 📄 License
+### Footer
 
-This project is for educational purposes. Tesla branding and assets are property of Tesla, Inc.
+The footer includes internal site navigation, a brand description, an input area, and a schedule-drive call to action.
 
-2. **Navigate to the project directory**:
-   ```bash
-   cd path/to/Tesla-landing-page
-   ```
+## Getting Started
 
-3. **Start a local web server**:
-   ```bash
-   # Using Python 3
-   python -m http.server 8000
+1. Clone or download the project.
+2. Open the project folder in your editor.
+3. Start a local server, for example:
 
-   # Or using Python 2
-   python -m SimpleHTTPServer 8000
-   ```
+```bash
+python -m http.server 8000
+```
 
-4. **Open your browser** and navigate to:
-   ```
-   http://localhost:8000
-   ```
+4. Visit `http://localhost:8000` in your browser.
 
-## 🗺️ EV Charging Stations Map
+## Customization
 
-The landing page includes an embedded Google Maps showing EV charging stations in Pretoria, South Africa. The map features:
+- Update text, headings, and section content in `index.html`
+- Adjust colors, spacing, button styles, and layout in `style.css`
+- Modify hero and models carousel behavior in `script.js`
+- Replace images in `img/`
+- Replace the hero video in `vid/`
+- Update the Google Maps embed URL in `index.html` if you want a different location
 
-- **Interactive Search Results**: Displays charging stations from GridCars, Rubicon, and Chargify
-- **Location Details**: Click on markers to see station information
-- **Responsive Design**: Adapts to different screen sizes
-- **No API Key Required**: Uses Google's embed functionality
+## Notes
 
-### Map Data Sources
-The embedded map shows real charging stations including:
-- GridCars Charging Stations
-- Rubicon Charging Stations
-- Chargify Charging Stations
-- EV Charging Stations
+- The first hero slide currently uses `vid/drive.mkv`
+- Some browsers support `.mp4` more reliably than `.mkv`, so converting the hero video to `.mp4` may improve compatibility
+- The footer question form currently points to ChatGPT in a new tab
 
-## 🎨 Customization
+## Sources
 
-### Changing Locations
-To display charging stations for a different area:
+This section lists the design, content, asset, tooling, and integration references used for or connected to this project.
 
-1. Go to [Google Maps](https://maps.google.com)
-2. Search for "charging stations [your location]"
-3. Click the "Share" button
-4. Select "Embed a map"
-5. Copy the iframe src URL
-6. Replace the iframe src in `index.html`
+### Design and Brand Inspiration
 
-### Modifying Content
-- **Models**: Update the carousel slides in `index.html`
-- **Styling**: Modify `style.css` for colors, fonts, and layout
-- **Features**: Add new sections in `index.html` and corresponding styles
+- [Tesla Official Website](https://www.tesla.com/) - primary visual and product inspiration
+- [Tesla Gallery](https://www.tesla.com/tesla-gallery) - imagery and presentation inspiration
 
-### Adding Google Maps API (Optional)
-If you prefer custom markers instead of the embedded search:
+### External Services Used in the Project
 
-1. Get a Google Maps JavaScript API key from [Google Cloud Console](https://console.cloud.google.com/)
-2. Uncomment the API script in `index.html`
-3. Uncomment the `initMap()` function in `script.js`
-4. Add your custom markers and locations
+- [Tesla favicon asset](https://www.tesla.com/themes/custom/tesla_frontend/assets/favicons/favicon.ico) - favicon used in `index.html`
+- [Google Maps Embed](https://www.google.com/maps/) - charging station map embedded in the charging section
+- [ChatGPT](https://chat.openai.com/) - external destination used by the footer question form
 
-## 📱 Responsive Design
+### Development and Research References
 
-The landing page is fully responsive and optimized for:
-- **Desktop**: Full-width layouts with side-by-side content
-- **Tablet**: Adjusted grid layouts and navigation
-- **Mobile**: Stacked layouts and touch-friendly navigation
+- [Serper.dev Playground](https://serper.dev/playground) - development research support
+- [Google AI Studio](https://aistudio.google.com/) - AI-assisted development support
 
-## 🔧 Development
+### Learning References
 
-### Local Development
-- Use any code editor (VS Code recommended)
-- Make changes to HTML, CSS, or JavaScript files
-- Refresh the browser to see changes
-- No build process required
+- [HTML Complete Guide - GeeksforGeeks](https://www.geeksforgeeks.org/html/html-complete-guide/) - HTML reference
+- [CSS Tutorial - GeeksforGeeks](https://www.geeksforgeeks.org/css/css-tutorial/) - CSS reference
+- [JavaScript Tutorial - GeeksforGeeks](https://www.geeksforgeeks.org/javascript/javascript-tutorial/) - JavaScript reference
 
-### Browser Compatibility
-- Chrome 70+
-- Firefox 65+
-- Safari 12+
-- Edge 79+
+### Local Project Assets
 
-## 📄 License
+The following local assets are part of the project repository:
 
-This project is for educational and demonstration purposes. Tesla branding and imagery are used for illustrative purposes only.
+- Hero video in `vid/drive.mkv`
+- Vehicle images in `img/ModelS.jpg`, `img/Model3.jpg`, `img/Model3_2.jpg`, `img/ModelX.jpg`, `img/ModelY.jpg`, and `img/ModelY_2.jpg`
+- Energy images in `img/SolarPanels.jpg`, `img/Powerwall.jpg`, and `img/Megapack.jpg`
+- Additional image asset in `img/Cybertruck.jpg`
 
-## 🤝 Contributing
+## License
 
-Feel free to fork this project and add your own improvements!
-
-## 📞 Support
-
-If you encounter any issues:
-1. Check that your local server is running on port 8000
-2. Ensure all files are in the same directory
-3. Try a different browser
-4. Check the browser console for JavaScript errors
-
----
-
-**Built with ❤️ for Tesla enthusiasts and EV drivers**</content>
-<parameter name="filePath">c:\Users\Arwe\Documents\Tesla-landing-page\README.md
+This project is for educational and portfolio purposes. Tesla branding, names, and related imagery remain the property of Tesla, Inc.

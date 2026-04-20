@@ -15,15 +15,15 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#models">Vehicles</a></li>
-                <li><a href="#energy">Energy</a></li>
+                <li><a href="#features">Energy</a></li>
                 <li><a href="#charging">Charging</a></li>
-                <li><a href="#discover">Discover</a></li>
-                <li><a href="#shop">Shop</a></li>
+                <li><a href="#hero">Discover</a></li>
+                <li><a href="#footer">Shop</a></li>
             </ul>
             <ul class="nav-right">
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Account</a></li>
-                <li><a href="#" id="menu-btn">Menu</a></li>
+                <li><a href="#footer">Support</a></li>
+                <li><a href="#footer">Account</a></li>
+                <li><a href="#models" id="menu-btn">Menu</a></li>
             </ul>
         </nav>
     </header>
@@ -32,12 +32,14 @@
         <div class="hero-slides">
             <div class="hero-slide active">
                 <video autoplay muted loop playsinline>
-                    <source src="/vid/drive.mkv" type="video/mp4">
+                    <source src="vid/drive.mkv" type="video/x-matroska">
                 </video>
                 <div class="hero-content">
-                    <h2>Full Self-Driving (Supervised)</h2>
+                    <p class="hero-eyebrow">Built for Every Drive</p>
+                    <h1>Electric Performance, Designed Around You</h1>
+                    <p class="hero-copy">Explore Tesla vehicles, intelligent driving technology, and a charging experience built for everyday use.</p>
                     <div class="hero-buttons">
-                        <button class="btn btn-fsd">Demo FSD (Supervised)</button>
+                        <button class="btn btn-fsd">Order Now</button>
                         <button class="btn btn-learn">Learn More</button>
                     </div>
                 </div>
@@ -45,7 +47,9 @@
             <div class="hero-slide">
                 <img src="img/Model3_2.jpg" alt="Tesla Model 3">
                 <div class="hero-content">
+                    <p class="hero-eyebrow">Everyday Range</p>
                     <h1>Model 3</h1>
+                    <p class="hero-copy">A streamlined sedan with long range, fast charging, and a minimalist interior.</p>
                     <div class="hero-buttons">
                         <button class="btn btn-fsd">Order Now</button>
                         <button class="btn btn-learn">View Inventory</button>
@@ -55,7 +59,9 @@
             <div class="hero-slide">
                 <img src="img/ModelY_2.jpg" alt="Tesla Model Y">
                 <div class="hero-content">
+                    <p class="hero-eyebrow">Versatile Utility</p>
                     <h1>Model Y</h1>
+                    <p class="hero-copy">Room for family, cargo, and everyday adventure with the practicality of an SUV.</p>
                     <div class="hero-buttons">
                         <button class="btn btn-fsd">Order Now</button>
                         <button class="btn btn-learn">View Inventory</button>
@@ -67,81 +73,90 @@
         <button class="hero-next">&gt;</button>
     </section>
 
-    <section id="models" class="carousel">
-        <div class="carousel-container">
-            <div class="slide">
-                <div class="slide-card">
-                    <img src="img/Model3.jpg" alt="Model 3">
-                    <div class="slide-overlay slide-type">Sport Sedan</div>
-                    <div class="slide-bottom">
-                        <div class="slide-model">Model 3</div>
-                        <div class="slide-price">From $46,990</div>
-                        <div class="slide-actions">
-                            <button class="btn btn-primary">Order Now</button>
-                            <button class="btn btn-secondary">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-card">
-                    <img src="img/ModelS.jpg" alt="Model S">
-                    <div class="slide-overlay slide-type">Midsize SUV</div>
-                    <div class="slide-bottom">
-                        <div class="slide-model">Model Y</div>
-                        <div class="slide-price">From $54,990</div>
-                        <div class="slide-actions">
-                            <button class="btn btn-primary">Order Now</button>
-                            <button class="btn btn-secondary">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-card">
-                    <img src="img/ModelS.jpg" alt="Model S">
-                    <div class="slide-overlay slide-type">Luxury Sedan</div>
-                    <div class="slide-bottom">
-                        <div class="slide-model">Model S</div>
-                        <div class="slide-price">From $89,990</div>
-                        <div class="slide-actions">
-                            <button class="btn btn-primary">Order Now</button>
-                            <button class="btn btn-secondary">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-card">
-                    <img src="img/ModelX.jpg" alt="Model X">
-                    <div class="slide-overlay slide-type">Luxury SUV</div>
-                    <div class="slide-bottom">
-                        <div class="slide-model">Model X</div>
-                        <div class="slide-price">From $99,990</div>
-                        <div class="slide-actions">
-                            <button class="btn btn-primary">Order Now</button>
-                            <button class="btn btn-secondary">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-card">
-                    <img src="img/Cybertruck.jpg" alt="Cybertruck">
-                    <div class="slide-overlay slide-type">Utility Truck</div>
-                    <div class="slide-bottom">
-                        <div class="slide-model">Cybertruck</div>
-                        <div class="slide-price">From $69,990</div>
-                        <div class="slide-actions">
-                            <button class="btn btn-primary">Order Now</button>
-                            <button class="btn btn-secondary">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="models" class="models-section">
+        <div class="section-heading">
+            <p class="section-kicker">Our Lineup</p>
+            <h2>Tesla Models</h2>
+            <p>Discover Tesla's four core vehicles in a clean, easy-to-scan layout built for quick comparison.</p>
         </div>
-        <button class="prev">&lt;</button>
-        <button class="next">&gt;</button>
+        <div class="models-carousel">
+            <div class="models-track">
+                <article class="model-slide">
+                    <div class="model-card">
+                        <img src="img/ModelS.jpg" alt="Tesla Model S">
+                        <div class="model-card-body">
+                            <span class="model-tag">Luxury Sedan</span>
+                            <h3>Model S</h3>
+                            <p>Premium performance, long range, and a refined interior built for high-speed comfort.</p>
+                            <div class="model-meta">
+                                <span>From $89,990</span>
+                                <span>396 mi range</span>
+                            </div>
+                            <div class="model-actions">
+                                <button class="btn btn-primary">Order Now</button>
+                                <button class="btn btn-secondary">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="model-slide">
+                    <div class="model-card">
+                        <img src="img/Model3.jpg" alt="Tesla Model 3">
+                        <div class="model-card-body">
+                            <span class="model-tag">Sport Sedan</span>
+                            <h3>Model 3</h3>
+                            <p>Efficient, quick, and designed for daily driving with modern technology throughout.</p>
+                            <div class="model-meta">
+                                <span>From $46,990</span>
+                                <span>341 mi range</span>
+                            </div>
+                            <div class="model-actions">
+                                <button class="btn btn-primary">Order Now</button>
+                                <button class="btn btn-secondary">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="model-slide">
+                    <div class="model-card">
+                        <img src="img/ModelX.jpg" alt="Tesla Model X">
+                        <div class="model-card-body">
+                            <span class="model-tag">Luxury SUV</span>
+                            <h3>Model X</h3>
+                            <p>Falcon Wing doors, spacious seating, and powerful electric performance for larger journeys.</p>
+                            <div class="model-meta">
+                                <span>From $99,990</span>
+                                <span>335 mi range</span>
+                            </div>
+                            <div class="model-actions">
+                                <button class="btn btn-primary">Order Now</button>
+                                <button class="btn btn-secondary">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="model-slide">
+                    <div class="model-card">
+                        <img src="img/ModelY.jpg" alt="Tesla Model Y">
+                        <div class="model-card-body">
+                            <span class="model-tag">Midsize SUV</span>
+                            <h3>Model Y</h3>
+                            <p>Versatile cargo space, elevated seating, and a practical electric SUV for everyday life.</p>
+                            <div class="model-meta">
+                                <span>From $54,990</span>
+                                <span>330 mi range</span>
+                            </div>
+                            <div class="model-actions">
+                                <button class="btn btn-primary">Order Now</button>
+                                <button class="btn btn-secondary">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <button class="models-prev" aria-label="Previous model">&lt;</button>
+            <button class="models-next" aria-label="Next model">&gt;</button>
+        </div>
     </section>
 
     <section id="features">
@@ -193,20 +208,34 @@
         <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d229184.00000000003!2d27.9381!3d-25.7461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sCharging%20stations%20Pretoria!5e0!3m2!1sen!2sza!4v1640995200000!5m2!1sen!2sza" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
-    <footer class="footer-fixed">
+    <footer class="site-footer" id="footer">
         <div class="footer-content">
-            <form class="ai-form" action="https://chat.openai.com/" target="_blank">
-                <div class="input-wrapper">
-                    <span class="input-title">Ask a question</span>
-                    <input type="text" id="ai-input" placeholder="What is Tesla's latest model?">
-                </div>
-            </form>
-            <button class="btn btn-drive">
-                <span class="steering-wheel-icon">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 2a8 8 0 0 1 7.938 7H13v-5.5a.5.5 0 0 0-1 0V11H4.062A8 8 0 0 1 12 4zm-6.938 8A8 8 0 0 1 11 19.938V13H6.5a.5.5 0 0 0 0 1H11v5.938A8 8 0 0 1 5.062 12zm7.938 7.938A8 8 0 0 1 18.938 12H13v5.5a.5.5 0 0 0 1 0V13h4.5a.5.5 0 0 0 0-1H14v-5.5a.5.5 0 0 0-1 0V12H5.062A8 8 0 0 1 12 19.938z"/></svg>
-                </span>
-                Schedule a Drive Today
-            </button>
+            <div class="footer-brand">
+                <a href="#hero" class="footer-logo">Tesla</a>
+                <p>Electric vehicles, charging, and clean energy in one connected experience.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="#hero">Home</a>
+                <a href="#models">Models</a>
+                <a href="#features">Energy</a>
+                <a href="#charging">Charging</a>
+                <a href="#hero">Demo Drive</a>
+                <a href="#footer">Support</a>
+            </nav>
+            <div class="footer-cta">
+                <form class="ai-form" action="https://chat.openai.com/" target="_blank">
+                    <div class="input-wrapper">
+                        <span class="input-title">Ask a question</span>
+                        <input type="text" id="ai-input" placeholder="What is Tesla's latest model?">
+                    </div>
+                </form>
+                <button class="btn btn-drive">
+                    <span class="steering-wheel-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 2a8 8 0 0 1 7.938 7H13v-5.5a.5.5 0 0 0-1 0V11H4.062A8 8 0 0 1 12 4zm-6.938 8A8 8 0 0 1 11 19.938V13H6.5a.5.5 0 0 0 0 1H11v5.938A8 8 0 0 1 5.062 12zm7.938 7.938A8 8 0 0 1 18.938 12H13v5.5a.5.5 0 0 0 1 0V13h4.5a.5.5 0 0 0 0-1H14v-5.5a.5.5 0 0 0-1 0V12H5.062A8 8 0 0 1 12 19.938z"/></svg>
+                    </span>
+                    Schedule a Drive Today
+                </button>
+            </div>
         </div>
     </footer>
 
