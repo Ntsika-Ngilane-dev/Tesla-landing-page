@@ -32,6 +32,20 @@ const heroSlides = document.querySelectorAll('.hero-slide');
 const heroPrev = document.querySelector('.hero-prev');
 const heroNext = document.querySelector('.hero-next');
 let heroIndex = 0;
+let heroTimer;
+
+function getHeroDelay() {
+    return heroIndex === 0 ? 18000 : 12000;
+}
+
+function startHeroAutoplay() {
+    clearTimeout(heroTimer);
+    heroTimer = setTimeout(() => {
+        heroIndex = (heroIndex < heroSlides.length - 1) ? heroIndex + 1 : 0;
+        updateHeroCarousel();
+        startHeroAutoplay();
+    }, getHeroDelay());
+}
 
 function updateHeroCarousel() {
     heroSlides.forEach((slide, index) => {
@@ -42,17 +56,16 @@ function updateHeroCarousel() {
 heroPrev.addEventListener('click', () => {
     heroIndex = (heroIndex > 0) ? heroIndex - 1 : heroSlides.length - 1;
     updateHeroCarousel();
+    startHeroAutoplay();
 });
 
 heroNext.addEventListener('click', () => {
     heroIndex = (heroIndex < heroSlides.length - 1) ? heroIndex + 1 : 0;
     updateHeroCarousel();
+    startHeroAutoplay();
 });
 
-setInterval(() => {
-    heroIndex = (heroIndex < heroSlides.length - 1) ? heroIndex + 1 : 0;
-    updateHeroCarousel();
-}, 12000);
+startHeroAutoplay();
 
 // AI Input Placeholder Cycling
 const aiInput = document.getElementById('ai-input');
